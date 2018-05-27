@@ -7,7 +7,7 @@
           "I understand conflicting perspectives and feel this way because %s. ", 
           "I believe this point is strongly supported by %s. "], 
         "3":[
-          "After reading this essay, I believe that the audience will agree strongly with the points above. ", 
+          "I feel that reading this essay will cause the audience to agree strongly with the points above. ", 
           "In the following paragraphs, I feel that a reader will firmly side with this opinion after reading the data I have gathered on the subject. "
           ]
     },
@@ -46,7 +46,8 @@
            "After finishing this essay, I hope the reader leaves with a better understanding of my perspective on the topic. "
        ],
     "xfluff": {
-        "intro": [], 
-        "body": ["I feel that this point is one of the strongest supporting points regarding this opinion.", "This strongly supports the initial thought of %s"]}
+        "intro": ["These points, among others, give this opinion substance. "], 
+        "body": ["I feel that this point is one of the strongest supporting points regarding this opinion. ", "This thought strongly supports the initial opinion. "],
+        "conclusion": ["While these are not the only supporting points, they are certainly among the most compelling. "]}
     }
 }

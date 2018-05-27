@@ -8,23 +8,35 @@ def fluffGetter(fname):
     return data
 
 #Function to select the correct style of essay
-def draftChooser(essayType, draftData):
+def draftChooser(essayType, draftData, fluffup=False):
 
     if essayType == 'Opinion':
-        print(opinionEssay(draftData))
+        print(opinionEssay(draftData, fluffup=fluff))
     else:
         print("Sorry, that format is not currently supported")
 
 #Function to draft an opinion essay
-def opinionEssay(data):
+def opinionEssay(data, fluffup=False):
     #Get the fluff for formatting the essay and prepare the essay string
     FLUFF = 'essayFluff/opinion_transitions_1.json'
     essayStr = ''
+    xtra = None
     essayfluff = fluffGetter(FLUFF)
     essayStr += introComposer("A BIG FANCY POINT", ["DETAIL 1", "DETAIL 2"], essayfluff['intro'])
-    print(essayStr)
+    saveEssay(essayStr)
 
-def introComposer(point, topics, fluff):
+def saveEssay(essayStr, filelocation='./'):
+    try:
+        print("Saving file, please wait..")
+        f = open((filelocation + 'draft.txt'), 'w')
+        f.write(essayStr)
+        f.close()
+        print("Save Successful!")
+    except:
+        print("Save Failure.  Please try again.")
+    
+
+def introComposer(point, topics, fluff, xtra=None):
     intro = '    '
 
     rnd = random.randrange(0, len(fluff['1']))  
@@ -38,6 +50,9 @@ def introComposer(point, topics, fluff):
         else:
             topicstr += ('%s, ' % topic)
     intro += fluff['2'][rnd] % topicstr
+
+    if xtra:
+        rnd = random.randrange(0, len(xtra))
 
     rnd = random.randrange(0, len(fluff['3']))  
     intro += fluff['3'][rnd]
