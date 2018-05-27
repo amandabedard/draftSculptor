@@ -1,0 +1,52 @@
+{
+    "intro": {
+        "1": [
+          "In my opinion, %s. ", 
+          "After learning the facts, I feel that the data strongly supports the opinion that %s. "], 
+        "2": [
+          "I understand conflicting perspectives and feel this way because %s. ", 
+          "I believe this point is strongly supported by %s. "], 
+        "3":[
+          "After reading this essay, I believe that the audience will agree strongly with the points above. ", 
+          "In the following paragraphs, I feel that a reader will firmly side with this opinion after reading the data I have gathered on the subject. "
+          ]
+    },
+
+    "topic": {
+        "1":[
+          "The first point I would like to discuss is %s. ",
+          "First, I feel my opinion is strongly supported by %s. "],
+        "2":[
+          "Another point I feel should be discussed is %s. ",
+          "Also, another supporting topic to review is %s. "
+        ],
+        "3": [
+           "Finally, I believe that %s strongly supports my opinion. ",
+           "A final supporting topic for my opinion is that %s. "
+        ]
+    },
+
+    "details": [
+        "This is further supported by the fact that %s.",
+        "%s strongly supports this detail. ",
+        "When you take into consideration %s, this topic becomes undoubtable. "
+    ],
+
+    "conclusion": {
+      "1": [
+          "In conclusion, I feel that %s.",  
+          "Finally, my opinion, that %s, is strongly supported by this essay. "
+       ],
+       "2": [
+           "This is supported in my discussion of %s. ",
+           "After discussing %s, I feel that my opinion is very well based. "
+       ],
+       "3": [
+           "I hope, after reading this essay, the audience is enlightened on my perspective. ",
+           "After finishing this essay, I hope the reader leaves with a better understanding of my perspective on the topic. "
+       ],
+    "xfluff": {
+        "intro": [], 
+        "body": ["I feel that this point is one of the strongest supporting points regarding this opinion.", "This strongly supports the initial thought of %s"]}
+    }
+}
