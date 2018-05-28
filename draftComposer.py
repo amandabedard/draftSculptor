@@ -15,9 +15,9 @@ def draftChooser(essayType, draftData, fluffup=False, template=None):
 
     if essayType.lower() == 'opinion':
         if not template:
-            opinionEssay(draftData, fluffup=fluff)
+            return opinionEssay(draftData, fluffup=fluffup)
         else:
-            opinionEssay(draftData, fluffup=fluff, template=template)
+            return opinionEssay(draftData, fluffup=fluffup, template=template)
             
     else:
         print("Sorry, that format is not currently supported")
@@ -55,6 +55,8 @@ def opinionEssay(data, fluffup=False, template='essayTemplates/opinion_transitio
     #Essay is done! Time to save.
     print("Finished composing the essay!")
     saveEssay(essayStr)
+
+    return essayStr
 
 #Function to save the essay to a file location or default the current directory
 def saveEssay(essayStr, filelocation='./'):

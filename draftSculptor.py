@@ -5,7 +5,7 @@ from outlineReader import readDraft
 def sculptDraft(outline, essayType, fluffup=False, template=None):
 
     draftJson = readDraft(outline)
-    draftChooser(essayType, draftJson, fluffup, template)
+    return draftChooser(essayType, draftJson, fluffup, template)
 
 #A little cmd line piece if the function is called directly
 if __name__ == "__main__":
