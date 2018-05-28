@@ -33,24 +33,32 @@ def opinionEssay(data, fluffup=False, template='essayTemplates/opinion_transitio
     #Get a few extra variables from the data
     topic = data['title']
     details = [k for k, v in data['data'].items()]
+    ixtra = None
+    bxtra = None
+    cxtra = None
+    if fluffup:
+        ixtra = essayfluff["xfluff"]['intro']
+        bxtra = essayfluff["xfluff"]['body']
+        cxtra = essayfluff["xfluff"]['conclusion']
+
 
     #Begin composing the essay, with the introduction
-    essayStr += firstlastComposer(topic, details, essayfluff['intro'])
+    essayStr += firstlastComposer(topic, details, essayfluff['intro'], xtra=ixtra)
     
     #Now, the body paragraphs
     paragraphs = len(details) + 1
     count = 1
     for detail in details:
         if count == 1:
-            essayStr += composebody("1", detail, data['data'][detail], essayfluff['topic'], essayfluff['details'])
+            essayStr += composebody("1", detail, data['data'][detail], essayfluff['topic'], essayfluff['details'], xtra=bxtra)
         elif count == paragraphs:
-            essayStr += composebody("3", detail, data['data'][detail], essayfluff['topic'], essayfluff['details'])
+            essayStr += composebody("3", detail, data['data'][detail], essayfluff['topic'], essayfluff['details'], xtra=bxtra)
         else:
-            essayStr += composebody("2", detail, data['data'][detail], essayfluff['topic'], essayfluff['details'])
+            essayStr += composebody("2", detail, data['data'][detail], essayfluff['topic'], essayfluff['details'], xtra=bxtra)
         count += 1
 
     #Finally, the conclusion paragraph
-    essayStr += firstlastComposer(topic, details, essayfluff['conclusion'])
+    essayStr += firstlastComposer(topic, details, essayfluff['conclusion'], xtra=cxtra)
 
     #Essay is done! Time to save.
     print("Finished composing the essay!")
@@ -87,6 +95,7 @@ def firstlastComposer(point, topics, fluff, xtra=None):
 
     if xtra:
         rnd = random.randrange(0, len(xtra))
+        intro += xtra[rnd]
 
     rnd = random.randrange(0, len(fluff['3']))  
     intro += (fluff['3'][rnd]).capitalize().replace(' i ', ' I ')
@@ -109,6 +118,10 @@ def composebody(num, detail, substance, fluff, dfluff, xtra=None):
         if substance[topic] != []:
             for deet in substance[topic]:
                 body += '%s. ' % deet.capitalize().replace(' i ', ' I ')
+        else:
+            rnd = random.randrange(0, len(xtra))
+            body += xtra[rnd]
+
     #Newline at the end of the paragraph, then send it back!
     body += '\n'
     return body

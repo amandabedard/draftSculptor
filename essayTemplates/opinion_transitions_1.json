@@ -46,10 +46,11 @@
        "3": [
            "I hope, after reading this essay, the audience is enlightened on my perspective. ",
            "After finishing this essay, I hope the reader leaves with a better understanding of my perspective on the topic. "
-       ],
+       ]
+    },
     "xfluff": {
-        "intro": ["These points, among others, give this opinion substance. "], 
+        "intro": ["These main points, among others, give this opinion substance. "], 
         "body": ["I feel that this point is one of the strongest supporting points regarding this opinion. ", "This thought strongly supports the initial opinion. "],
-        "conclusion": ["While these are not the only supporting points, they are certainly among the most compelling. "]}
+        "conclusion": ["While these are not the only supporting points, they are certainly among the most compelling. "]
     }
 }

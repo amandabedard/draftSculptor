@@ -12,6 +12,7 @@ def start():
 
     #Configure the UI
     master = Tk()
+    master.title("DraftSculptor")
     Label(master, text="DraftSculptor Essay Draft Generator").grid(row=0)
     Label(master, text="").grid(row=1)
     Label(master, text="Outline file: ").grid(row=2, column=0, sticky=W, pady=4)
