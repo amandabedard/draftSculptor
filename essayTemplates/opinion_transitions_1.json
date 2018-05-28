@@ -16,11 +16,15 @@
     "topic": {
         "1":[
           "The first point I would like to discuss is %s. ",
-          "First, I feel my opinion is strongly supported by %s. "],
+          "First, I feel my opinion is strongly supported by %s. ",
+          "First and foremost, an important point to consider is that %s. "],
         "2":[
           "Another point I feel should be discussed is %s. ",
           "Also, another supporting topic to review is %s. ",
           "Another detail to keep in mind is that %s. ",
+          "Equally as important as the others, %s. ",
+          "Additionally, this point is supported by %s. ",
+          "%s must be remembered when considering this opinion as well. ",
           "Along with what has been mentioned, %s is also important to note."
         ],
         "3": [
@@ -33,27 +37,50 @@
         "This is further supported by the fact that %s. ",
         "%s strongly supports this detail. ",
         "An additional piece of information, %s, supports this matter. ",
-        "To support this point, one must keep in mind %s.",
+        "To support this point, one must keep in mind %s. ",
+        "To put it another way, %s. ",
+        "Some compelling evidence towards this point is %s. ",
+        "Attention must be brought to %s when considering this point. ",
+        "In detail, %s. ",
+        "Alongside this point, %s can be mentioned. ",
+        "In particular, one must consider %s. ",
+        "Indeed, this point is brought to life when taking %s into account. ",
+        "In other words, this idea is supported by %s. ",
         "When you take into consideration %s, this topic becomes undoubtable. "
     ],
 
     "conclusion": {
       "1": [
-          "In conclusion, I feel that %s.",  
-          "Finally, my opinion, that %s, is strongly supported by this essay. "
+          "In conclusion, I feel that %s.", 
+          "All things considered, I feel the evidence points strongly to %s. ", 
+          "Finally, my opinion, that %s, is strongly supported by this essay. ",
+          "In the final analysis of the data, it can be observed that %s. ",
+          "In any event, one can gather that the evidence points to supporting that %s."
        ],
        "2": [
            "This is supported in my discussion of %s. ",
+           "As shown above, this opinion is well supported when considering %s. ",
+           "My opinion is suppoprted all together when considering %s. ",
            "After discussing %s, I feel that my opinion is very well based. "
        ],
        "3": [
            "I hope, after reading this essay, the audience is enlightened on my perspective. ",
-           "After finishing this essay, I hope the reader leaves with a better understanding of my perspective on the topic. "
+           "After finishing this essay, I hope the reader leaves with a better understanding of my perspective on the topic. ",
+           "This essay ends with the hope that the reader has a stronger understanding of the intricate details involved in this opinion. "
        ]
     },
     "xfluff": {
-        "intro": ["These main points, among others, give this opinion substance. "], 
-        "body": ["I feel that this point is one of the strongest supporting points regarding this opinion. ", "This thought strongly supports the initial opinion. "],
-        "conclusion": ["While these are not the only supporting points, they are certainly among the most compelling. "]
+        "intro": [
+            "These main points, among others, give this opinion substance. ", 
+            "While this may just be an opinion, I feel that it is strongly backed by the evidence I've gathered. ",
+            "When dissected carefully, these points bring new meaning to this opinion. "], 
+        "body": [
+            "I feel that this point is one of the strongest supporting points regarding this opinion. ", 
+            "This thought strongly supports the initial opinion. ",
+            "When it comes down to it, this point is paramount in supporting this opinion. ",
+            "I find that the best support of this opinion comes from the lesser considered evidence. "],
+        "conclusion": [
+            "While these are not the only supporting points, they are certainly among the most compelling. ", 
+            "With all this in mind, one must consider all options for this opinion."]
     }
 }

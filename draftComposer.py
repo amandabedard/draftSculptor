@@ -123,8 +123,9 @@ def composebody(num, detail, substance, fluff, dfluff, xtra=None):
             for deet in substance[topic]:
                 body += '%s. ' % deet.capitalize().replace(' i ', ' I ')
         else:
-            rnd = random.randrange(0, len(xtra))
-            body += xtra[rnd]
+            if xtra:
+                rnd = random.randrange(0, len(xtra))
+                body += xtra[rnd]
 
     #Newline at the end of the paragraph, then send it back!
     body += '\n'
