@@ -1,3 +1,4 @@
+#Amanda Bedard, 2018
 #File for reading and interpreting the outline
 
 #Function to read the draft from a file
@@ -5,13 +6,14 @@ def readDraft(fname):
     f = open(fname, "r")
     lines = f.read().splitlines()
     f.close()
-    return lines
+    return parseDraft(lines)
 
 #Function to parse the draft and create a dict with relevant data
 def parseDraft(lines):
     #Some variables for keeping track of the topics and the dict object
     outlineDict = {
-        'title': ''
+        'title': '',
+        'data': {}
         }
     currentTopic = ''
     subtopic = ''
@@ -22,13 +24,13 @@ def parseDraft(lines):
             if line[0] == '#':
                 outlineDict['title'] = line[1:len(line)]
             elif line[0] == '>':
-                outlineDict[line[1:len(line)]] = {}
+                outlineDict['data'][line[1:len(line)]] = {}
                 currentTopic = line[1:len(line)]
             elif line[0] == '<':
-                outlineDict[currentTopic][line[1:len(line)]] = []
+                outlineDict['data'][currentTopic][line[1:len(line)]] = []
                 subtopic = line[1:len(line)]
             elif line[0] == '-':
-                outlineDict[currentTopic][subtopic].append(line[1:len(line)])
+                outlineDict['data'][currentTopic][subtopic].append(line[1:len(line)])
             #Something is wrong with the formatting, raise an exception
             else:
                 raise

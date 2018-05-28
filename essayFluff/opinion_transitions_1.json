@@ -5,7 +5,7 @@
           "After learning the facts, I feel that the data strongly supports the opinion that %s. "], 
         "2": [
           "I understand conflicting perspectives and feel this way because %s. ", 
-          "I believe this point is strongly supported by %s. "], 
+          "I believe this point is strongly supported by the following details: %s. "], 
         "3":[
           "I feel that reading this essay will cause the audience to agree strongly with the points above. ", 
           "In the following paragraphs, I feel that a reader will firmly side with this opinion after reading the data I have gathered on the subject. "
@@ -27,7 +27,7 @@
     },
 
     "details": [
-        "This is further supported by the fact that %s.",
+        "This is further supported by the fact that %s. ",
         "%s strongly supports this detail. ",
         "When you take into consideration %s, this topic becomes undoubtable. "
     ],
