@@ -77,13 +77,15 @@ def saveEssay(essayStr, filelocation='./'):
     except:
         print("Save Failure.  Please try again.")
 
-#Function to compose an introductory or conclusion paragraph    
+#Function to compose a generic introductory or conclusion paragraph    
 def firstlastComposer(point, topics, fluff, xtra=None):
     intro = '    '
 
+    #Start with an introductory sentence
     rnd = random.randrange(0, len(fluff['1']))  
     intro += (fluff['1'][rnd] % point).capitalize().replace(' i ', ' I ')
 
+    #Now list the topics of discussion
     rnd = random.randrange(0, len(fluff['2']))
     topicstr = ''
     for topic in topics:
@@ -97,11 +99,13 @@ def firstlastComposer(point, topics, fluff, xtra=None):
         rnd = random.randrange(0, len(xtra))
         intro += xtra[rnd]
 
+    #Close it out!
     rnd = random.randrange(0, len(fluff['3']))  
     intro += (fluff['3'][rnd]).capitalize().replace(' i ', ' I ')
     intro += '\n'
     return intro
 
+#Function to compose a generic body paragraph
 def composebody(num, detail, substance, fluff, dfluff, xtra=None):
     body = '    '
     subtopics = [k for k, v in substance.items()]

@@ -1,3 +1,5 @@
+#Amanda Bedard, 2018
+#The main file, used to launch the cmd line interface
 import ui
 
 from draftComposer import draftChooser
@@ -36,4 +38,5 @@ if __name__ == "__main__":
         template = None
 
     print("Thanks! It's time to generate your essay draft!")
+    print()
     sculptDraft(outline, essayType, fluffup=fluffup, template=template)

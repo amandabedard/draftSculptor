@@ -1,3 +1,6 @@
+#Amanda Bedard, 2018
+#A simple UI for the app
+
 from tkinter import *
 from draftSculptor import sculptDraft
 
