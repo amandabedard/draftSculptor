@@ -1,32 +1,38 @@
 from tkinter import *
 from draftSculptor import sculptDraft
 
-def makeEssay():
-    eoutline = outline.get()
-    eessayType = essaytype.get()
-    essay.delete("1.0", END)
+def start():
+    #Populate the essay box
+    def makeEssay():
+        eoutline = outline.get()
+        eessayType = essaytype.get()
+        essay.delete("1.0", END)
 
-    essay.insert(END, sculptDraft(eoutline, eessayType))
+        essay.insert(END, sculptDraft(eoutline, eessayType))
 
-master = Tk()
-Label(master, text="DraftSculptor Essay Draft Generator").grid(row=0)
-Label(master, text="").grid(row=1)
-Label(master, text="Outline file: ").grid(row=2, column=0, sticky=W, pady=4)
-Label(master, text="Essay Type: ").grid(row=3, column=0, sticky=W, pady=4)
-Label(master, text="Template: ").grid(row=5, column=0, sticky=W, pady=4)
-Label(master, text="").grid(row=6)
-Label(master, text="<Not yet supported>").grid(row=5, column=0)
+    #Configure the UI
+    master = Tk()
+    Label(master, text="DraftSculptor Essay Draft Generator").grid(row=0)
+    Label(master, text="").grid(row=1)
+    Label(master, text="Outline file: ").grid(row=2, column=0, sticky=W, pady=4)
+    Label(master, text="Essay Type: ").grid(row=3, column=0, sticky=W, pady=4)
+    Label(master, text="Template: ").grid(row=5, column=0, sticky=W, pady=4)
+    Label(master, text="").grid(row=6)
+    Label(master, text="<Not yet supported>").grid(row=5, column=0)
 
-outline = Entry(master)
-outline.insert(END,'sampleDocs/outline.txt')
-essaytype = Entry(master)
-essaytype.insert(END, 'opinion')
-essay = Text(master, wrap=WORD)
+    outline = Entry(master)
+    outline.insert(END,'sampleDocs/outline.txt')
+    essaytype = Entry(master)
+    essaytype.insert(END, 'opinion')
+    essay = Text(master, wrap=WORD)
 
-outline.grid(row=2, column=0)
-essaytype.grid(row=3, column=0)
-essay.grid(row=8)
+    outline.grid(row=2, column=0)
+    essaytype.grid(row=3, column=0)
+    essay.grid(row=8)
 
-Button(master, text='Compose Essay', command=lambda : makeEssay()).grid(row=7, column=0, sticky=W, pady=4)
+    Button(master, text='Compose Essay', command=lambda : makeEssay()).grid(row=7, column=0, sticky=W, pady=4)
 
-mainloop()
+    mainloop()
+
+if __name__ == '__main__':
+    start()

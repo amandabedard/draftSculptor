@@ -1,7 +1,7 @@
 {
     "intro": {
         "1": [
-          "In my opinion, %s. ", 
+          "In my opinion, after some heavy research, I believe that %s. ", 
           "After learning the facts, I feel that the data strongly supports the opinion that %s. "], 
         "2": [
           "I understand conflicting perspectives and feel this way because %s. ", 
@@ -18,7 +18,8 @@
           "First, I feel my opinion is strongly supported by %s. "],
         "2":[
           "Another point I feel should be discussed is %s. ",
-          "Also, another supporting topic to review is %s. "
+          "Also, another supporting topic to review is %s. ",
+          "Another detail to keep in mind is that %s"
         ],
         "3": [
            "Finally, I believe that %s strongly supports my opinion. ",
@@ -29,6 +30,7 @@
     "details": [
         "This is further supported by the fact that %s. ",
         "%s strongly supports this detail. ",
+        "An additional piece of information, %s, supports this matter.",
         "When you take into consideration %s, this topic becomes undoubtable. "
     ],
 

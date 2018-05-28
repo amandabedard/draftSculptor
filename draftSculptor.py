@@ -1,5 +1,8 @@
+import ui
+
 from draftComposer import draftChooser
 from outlineReader import readDraft
+
 
 #Cute lil function to get the draft data and compose the essay
 def sculptDraft(outline, essayType, fluffup=False, template=None):
@@ -10,6 +13,10 @@ def sculptDraft(outline, essayType, fluffup=False, template=None):
 #A little cmd line piece if the function is called directly
 if __name__ == "__main__":
     print("Welcome to draft sculptor!")
+    yn = input("Would you like to try the User Interface (Y/N): ")
+    if yn.lower() == 'y' or yn.lower() == 'yes':
+        ui.start()
+        exit()
     #Basic inputs
     outline = input("What is the name of your outline: ")
     essayType = input("What type of essay is it (ex: opinion): ")
