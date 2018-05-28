@@ -11,10 +11,14 @@ def fluffGetter(fname):
     return data
 
 #Function to select the correct style of essay
-def draftChooser(essayType, draftData, fluffup=False):
+def draftChooser(essayType, draftData, fluffup=False, template=None):
 
-    if essayType == 'Opinion':
-        print(opinionEssay(draftData, fluffup=fluff))
+    if essayType.lower() == 'opinion':
+        if not template:
+            opinionEssay(draftData, fluffup=fluff)
+        else:
+            opinionEssay(draftData, fluffup=fluff, template=template)
+            
     else:
         print("Sorry, that format is not currently supported")
 
@@ -49,7 +53,7 @@ def opinionEssay(data, fluffup=False, template='essayFluff/opinion_transitions_1
     essayStr += firstlastComposer(topic, details, essayfluff['conclusion'])
 
     #Essay is done! Time to save.
-    print("Finished composing the essay, please wait..")
+    print("Finished composing the essay!")
     saveEssay(essayStr)
 
 #Function to save the essay to a file location or default the current directory
@@ -59,7 +63,7 @@ def saveEssay(essayStr, filelocation='./'):
         f = open((filelocation + 'draft.txt'), 'w')
         f.write(essayStr)
         f.close()
-        print("Save Successful!")
+        print("Save Successful! File saved at %sdraft.txt" % (filelocation))
     except:
         print("Save Failure.  Please try again.")
 
@@ -107,5 +111,4 @@ def composebody(num, detail, substance, fluff, dfluff, xtra=None):
     body += '\n'
     return body
 
-
-opinionEssay(readDraft('outline.txt'))
+#opinionEssay(readDraft('outline.txt'))
