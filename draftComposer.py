@@ -23,7 +23,7 @@ def draftChooser(essayType, draftData, fluffup=False, template=None):
         print("Sorry, that format is not currently supported")
 
 #Function to draft an opinion essay
-def opinionEssay(data, fluffup=False, template='essayFluff/opinion_transitions_1.json'):
+def opinionEssay(data, fluffup=False, template='essayTemplates/opinion_transitions_1.json'):
     #Get the fluff for formatting the essay and initialize the essay string
     print("Preparing your opinion essay, please wait..")
     essayStr = ''
