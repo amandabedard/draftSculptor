@@ -1,0 +1,12 @@
+#topic
+>main point 1
+<supporting detail
+-additional information
+>main point2
+<supporting detail
+<supporting detail2
+-additional information
+-additional information2
+>main point3
+<supporting detail
+<supporting detail2
