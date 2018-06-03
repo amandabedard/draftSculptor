@@ -22,6 +22,7 @@ def start():
     #Configure the UI
     master = Tk()
     master.title("DraftSculptor")
+
     Label(master, text="DraftSculptor Essay Draft Generator").grid(row=0)
     Label(master, text="").grid(row=1)
     Label(master, text="Outline file: ").grid(row=2, column=0, sticky=W, pady=4)
@@ -34,7 +35,7 @@ def start():
     outline = Entry(master)
     outline.insert(END,'sampleDocs/outline.txt')
     essaytype= StringVar()
-    box = OptionMenu(master, essaytype, ESSAYOPTIONS).grid(row=3, column=0)
+    box = OptionMenu(master, essaytype, *ESSAYOPTIONS).grid(row=3, column=0)
     essaytype.set('Opinion')
     fluff = IntVar()
     Checkbutton(master, variable=fluff).grid(row=6, column=0)
